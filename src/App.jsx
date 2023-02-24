@@ -3,6 +3,7 @@ import Post from "./components/Post";
 import PostsList from "./components/PostsList";
 import GlobalFooter from "./components/UI/GlobalFooter";
 import Logos from "./components/Logos";
+import Title from "./components/Title";
 import "./App.scss";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <PostsList />
       </main>
       <Logos />
-      <h1>Vite + React</h1>
+      <Title />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
