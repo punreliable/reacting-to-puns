@@ -11,11 +11,12 @@ function App() {
 
   return (
     <div className="App">
+      <Logos />
+      <Title />
       <main>
         <PostsList />
       </main>
-      <Logos />
-      <Title />
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
