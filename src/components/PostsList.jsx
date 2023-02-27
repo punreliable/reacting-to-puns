@@ -1,18 +1,30 @@
-// import styles from "../components/Post.module.css";
-import Post from "../components/Post";
+import { useState } from 'react';
 import styles from "./PostsList.module.scss";
+import Post from "../components/Post";
 import NewPost from "../components/NewPost";
 
 const PostsList = (props) => {
+  const [enteredBody, setEnteredBody] = useState('');
+  const [enteredAuthor, setEnteredAuthor] = useState('');
+
+  const bodyChangeHandler = (event) => {
+    setEnteredBody(event.target.value);
+  };
+
+  const authorChangeHandler = (event) => {
+    setEnteredAuthor(event.target.value);
+  };
+
   return (
     <>
-      <NewPost />
+     <NewPost onBodyChange={bodyChangeHandler} onAuthorChange={authorChangeHandler} />
       <ul className={styles.posts}>
-        <Post author="Brian" body="Hello World!" />
+        <Post author={enteredAuthor} body={enteredBody} />
         <Post author="Andrew" body="Top Secret!" />
         <Post author="Smith" body="Bottom Secret!" />
       </ul>
     </>
   );
 };
+
 export default PostsList;

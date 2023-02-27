@@ -1,13 +1,11 @@
 import reactLogo from "../assets/react.svg";
+import punreliableLogo from "../assets/logo-punreliable.svg";
 
 const Logos = () => {
   return (
     <div>
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" className="logo" alt="Vite logo" />
-      </a>
-      <a href="https://reactjs.org" target="_blank">
-        <img src={reactLogo} className="logo react" alt="React logo" />
+      <a href="http://punreliable.com" target="_blank">
+        <img src={punreliableLogo} className="logo react" alt="React logo" />
       </a>
     </div>
   );
