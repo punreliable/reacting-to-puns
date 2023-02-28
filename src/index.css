@@ -1,14 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
 * {
   box-sizing: border-box;
 }
 
 :root {
   min-height: 100vh;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Gamja Flower", Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: 400;
-  background-image: radial-gradient(ellipse at top left, #7f50e4, #4c05d0);
+  background: linear-gradient(180deg, rgb(0, 19, 31) 10%, rgb(0, 109, 176) 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

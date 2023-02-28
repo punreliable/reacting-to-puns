@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,14 +6,16 @@
 
 :root {
   min-height: 100vh;
-  font-family: 'Gamja Flower', Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Gamja Flower", Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: 400;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 19, 31, 1) 10%,
+    rgba(0, 109, 176, 1) 100%
+  );
 
-  background: rgb(0,19,31);
-  background: linear-gradient(180deg, rgba(0,19,31,1) 10%, rgba(0,109,176,1) 100%);
-  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,5 +29,4 @@ body {
   margin: 0;
   text-align: center;
   color: #e6ddf9;
-  background-color: #FFF8E7;
 }
