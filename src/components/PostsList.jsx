@@ -1,33 +1,56 @@
-import { useState } from "react";
-import styles from "./PostsList.module.scss";
-import Post from "../components/Post";
-import NewPost from "../components/NewPost";
+import { useState } from 'react';
 
-const PostsList = () => {
-  const [enteredBody, setEnteredBody] = useState("");
-  const [enteredAuthor, setEnteredAuthor] = useState("");
+import Post from './Post';
+import NewPost from './NewPost';
+import Modal from './Modal';
+import classes from './PostsList.module.scss';
 
-  const bodyChangeHandler = (event) => {
+function PostsList() {
+  const [modalIsVisible, setModalIsVisible] = useState(true);
+  const [enteredBody, setEnteredBody] = useState('');
+  const [enteredAuthor, setEnteredAuthor] = useState('');
+
+  function hideModalHandler() {
+    setModalIsVisible(false);
+  }
+
+  function bodyChangeHandler(event) {
     setEnteredBody(event.target.value);
-  };
+  }
 
-  const authorChangeHandler = (event) => {
+  function authorChangeHandler(event) {
     setEnteredAuthor(event.target.value);
-  };
+  }
+
+  // let modalContent;
+
+  // if (modalIsVisible) {
+  //   modalContent = (
+  // <Modal onClose={hideModalHandler}>
+  //   <NewPost
+  //     onBodyChange={bodyChangeHandler}
+  //     onAuthorChange={authorChangeHandler}
+  //   />
+  // </Modal>
+  //   );
+  // }
 
   return (
     <>
-      <NewPost
-        onBodyChange={bodyChangeHandler}
-        onAuthorChange={authorChangeHandler}
-      />
-      <ul className={styles.posts}>
+      {modalIsVisible && (
+        <Modal onClose={hideModalHandler}>
+          <NewPost
+            onBodyChange={bodyChangeHandler}
+            onAuthorChange={authorChangeHandler}
+          />
+        </Modal>
+      )}
+      <ul className={classes.posts}>
         <Post author={enteredAuthor} body={enteredBody} />
-        <Post author="Andrew" body="Top Secret!" />
-        <Post author="Smith" body="Bottom Secret!" />
+        <Post author="Manuel" body="Check out the full course!" />
       </ul>
     </>
   );
-};
+}
 
 export default PostsList;
