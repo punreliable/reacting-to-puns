@@ -1,4 +1,4 @@
-import classes from './Modal.module.scss';
+import classes from "./Modal.module.scss";
 
 function Modal({ children, onClose }) {
   return (

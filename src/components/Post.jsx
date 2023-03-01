@@ -1,4 +1,4 @@
-import classes from './Post.module.scss';
+import classes from "./Post.module.scss";
 
 function Post({ author, body }) {
   return (

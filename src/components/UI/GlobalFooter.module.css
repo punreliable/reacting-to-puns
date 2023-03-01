@@ -1,0 +1,12 @@
+footer {
+  display: block flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+footer .read-the-docs {
+  color: #888;
+}
+
+/*# sourceMappingURL=GlobalFooter.module.css.map */
