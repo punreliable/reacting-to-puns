@@ -1,10 +1,12 @@
 import { MdPostAdd, MdMessage } from "react-icons/md";
 import classes from "./MainHeader.module.scss";
 import Logos from "./Logos";
+import Title from "./Title";
 
 const MainHeader = ({ onCreatePost }) => {
   return (
     <header className={classes.header}>
+      <Title />
       <Logos />
       <h1 className={classes.logo}>
         <MdMessage />
